@@ -59,6 +59,11 @@ body {
     color: var(--primary);
 }
 
+.logo a {
+    color: inherit; /* Использовать цвет родителя */
+    text-decoration: none; /* Убрать подчеркивание */
+}
+
 .nav-links {
     display: flex;
     gap: 30px;
