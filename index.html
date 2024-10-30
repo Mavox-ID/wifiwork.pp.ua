@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School WiFi - room-217/218</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/wifi-icon.ico">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="container">
+        <div class="nav-container">
             <div class="logo">
-                <i class="fas fa-wifi"></i> School WiFi
+                <i class="fas fa-wifi"></i>
+                <span>School WiFi</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Главная</a></li>
@@ -19,39 +21,36 @@
                 <li><a href="#coverage">Покрытие</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </nav>
 
-    <header id="home" class="hero">
-        <div class="container">
-            <h1>Школьный WiFi</h1>
-            <p>Бесплатный доступ к сети в кабинетах 217 и 218</p>
-            <div class="wifi-names">
-                <span class="wifi-tag">room-217</span>
-                <span class="wifi-tag">room-218</span>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="animate-fade">Школьный WiFi</h1>
+            <p class="animate-fade-delay">Бесплатный доступ к сети в кабинетах 217 и 218</p>
+            <div class="wifi-badges animate-fade-delay-2">
+                <div class="badge">room-217</div>
+                <div class="badge">room-218</div>
             </div>
-            <a href="#contact" class="cta-button">Подключиться</a>
+            <a href="#contact" class="connect-btn animate-fade-delay-3">Подключиться</a>
         </div>
-    </header>
+    </section>
 
     <section id="about" class="about">
-        <div class="container">
+        <div class="section-container">
             <h2>О нашей сети</h2>
             <div class="features">
-                <div class="feature">
+                <div class="feature-card">
                     <i class="fas fa-clock"></i>
                     <h3>Время работы</h3>
                     <p>7:00 - 14:00<br>Понедельник - Пятница</p>
                 </div>
-                <div class="feature">
+                <div class="feature-card">
                     <i class="fas fa-wifi"></i>
                     <h3>Бесплатный доступ</h3>
                     <p>Свободное подключение для всех учеников</p>
                 </div>
-                <div class="feature">
+                <div class="feature-card">
                     <i class="fas fa-shield-alt"></i>
                     <h3>Безопасность</h3>
                     <p>Защищенное соединение для учебных целей</p>
@@ -61,23 +60,23 @@
     </section>
 
     <section id="coverage" class="coverage">
-        <div class="container">
+        <div class="section-container">
             <h2>Зона покрытия</h2>
-            <div class="coverage-info">
-                <div class="room">
+            <div class="rooms">
+                <div class="room-card">
                     <h3>room-217</h3>
                     <p>Кабинет 217</p>
-                    <div class="signal-strength">
+                    <div class="signal">
                         <i class="fas fa-signal"></i>
                         <i class="fas fa-signal"></i>
                         <i class="fas fa-signal"></i>
                         <i class="fas fa-signal"></i>
                     </div>
                 </div>
-                <div class="room">
+                <div class="room-card">
                     <h3>room-218</h3>
                     <p>Кабинет 218</p>
-                    <div class="signal-strength">
+                    <div class="signal">
                         <i class="fas fa-signal"></i>
                         <i class="fas fa-signal"></i>
                         <i class="fas fa-signal"></i>
@@ -89,20 +88,20 @@
     </section>
 
     <section id="contact" class="contact">
-        <div class="container">
+        <div class="section-container">
             <h2>Контакты администратора</h2>
-            <div class="contact-info">
-                <div class="contact-item">
+            <div class="contact-cards">
+                <div class="contact-card">
                     <i class="fas fa-user"></i>
                     <h3>Администратор</h3>
                     <p>Марк Вознюк</p>
                 </div>
-                <div class="contact-item">
+                <div class="contact-card">
                     <i class="fas fa-phone"></i>
                     <h3>Телефон</h3>
                     <p><a href="tel:+380668766770">+380 66 876 6770</a></p>
                 </div>
-                <div class="contact-item">
+                <div class="contact-card">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
                     <p><a href="mailto:markd.voznyuk@gmail.com">markd.voznyuk@gmail.com</a></p>
@@ -111,12 +110,10 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 School WiFi. Все права защищены.</p>
-        </div>
+    <footer>
+        <p>&copy; 2024 School WiFi. Все права защищены.</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

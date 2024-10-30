@@ -1,4 +1,4 @@
-// Плавная прокрутка для навигации
+// Плавная прокрутка
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -8,27 +8,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Мобильное меню
-const menuBtn = document.querySelector('.menu-btn');
-const navLinks = document.querySelector('.nav-links');
-
-menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-});
-
 // Анимация появления элементов при скролле
-const observerOptions = {
-    threshold: 0.1
-};
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
         }
     });
-}, observerOptions);
+}, {
+    threshold: 0.1
+});
 
-document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
+document.querySelectorAll('.feature-card, .room-card, .contact-card').forEach(element => {
+    observer.observe(element);
+});
+
+// Добавляем класс для фиксированной навигации при скролле
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });
